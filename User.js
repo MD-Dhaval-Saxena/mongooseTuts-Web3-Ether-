@@ -8,23 +8,23 @@ const addressSchema = new mongoose.Schema({
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    // required: true,
-    // lowercase: true,
+    required: true,
+    lowercase: true,
     
   },
-  // age: Number,
-  // email: String,
-  // createdAt: {
-  //   type: Date,
-  //   default: () => Date.now(),
-  // },
-  // updatedAt: {
-  //   type: Date,
-  //   default: () => Date.now(),
-  // },
-  // bestfriend: mongoose.SchemaTypes.ObjectId,
-  // hobbies: [String],
-  // address: addressSchema,
+  age: Number,
+  email: String,
+  createdAt: {
+    type: Date,
+    default: () => Date.now(),
+  },
+  updatedAt: {
+    type: Date,
+    default: () => Date.now(),
+  },
+  bestfriend: mongoose.SchemaTypes.ObjectId,
+  hobbies: [String],
+  address: addressSchema,
 });
 
 module.exports = mongoose.model("User", userSchema);

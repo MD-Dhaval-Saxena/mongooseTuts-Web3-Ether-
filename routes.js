@@ -3,7 +3,9 @@ const userModel = require("./User");
 const app = express();
 
 app.post("/add_user", async (request, response) => {
-    const user = await userModel.create(request.body);
+    let document=JSON.stringify(request.body);
+    console.log(document);
+    const user = await userModel.create(req);
   
     try {
       await user.save();
@@ -21,5 +23,18 @@ app.get("/users", async (request, response) => {
       response.status(500).send(error);
     }
   });
+app.post("/delete", async (request, response) => {
+    const user = await userModel.deleteOne(request.body);
+  
+    try {
+      await user.save();
+      response.send(user);
+    } catch (error) {
+      response.status(500).send(error);
+    }
+  });
+
+
+
 
   module.exports = app;
