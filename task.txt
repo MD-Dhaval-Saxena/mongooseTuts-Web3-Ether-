@@ -1,0 +1,4 @@
+// mongo connection parameters
+bufferCommands,user/pass,autoIndex ,dbName ,promiseLibrary ,maxPoolSize minPoolSize ,socketTimeoutMS,family,
+// web3 connect and fetch data from smart contract
+// web3 setup

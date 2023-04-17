@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { ethers } = require("ethers");
 
-const abi = require("./abi.json");
+const abi = require("../ABI/abi.json");
 const contract_address = process.env.contract_address;
 const account = process.env.account;
 const account2 = process.env.account2;

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const User = require("./User");
+const User = require("./Models/User");
 
 mongoose.connect("mongodb://127.0.0.1:27017/MyUsers");
 
@@ -7,7 +7,7 @@ async function run() {
   // const user=await User.create({name:"Dhaval",age:22})
   try {
     const user = await User.create({
-      name: "jash",
+      // name: "jash",
       age: 22,
       hobbies: ["bike Riding", "Music"],
       address: {
@@ -21,7 +21,7 @@ async function run() {
     console.log(e.message);
   }
 }
-// run();
+run();
 
 
 async function getById(){
@@ -32,7 +32,7 @@ async function getById(){
         // console.log(error.message);
     }
 }
-getById()
+// getById()
 
 async function getAll(){
     try {
@@ -42,7 +42,7 @@ async function getAll(){
         // console.log(error.message);
     }
 }
-getAll()
+// getAll()
 
 
 async function deleteByName(){
@@ -54,6 +54,6 @@ async function deleteByName(){
         
     }
 }
-deleteByName()
+// deleteByName()
 
 

@@ -9,7 +9,15 @@
   "author": "dhaval",
   "license": "ISC",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.9",
     "express": "^4.18.2",
-    "mongoose": "^7.0.2"
+    "ethers":"5.6.5",
+    "mongoose": "^7.0.2",
+    "solc": "^0.8.0",
+    "web3": "^1.9.0",
+    "web3-providers": "^1.0.0-beta.55"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }
